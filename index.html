@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Simulacion de procesamiento por lotes</title>
+
+</head>
+<body>
+    <header>
+        <h1>Simulacion de procesamiento por lotes</h1>
+        <p>Alumno: <span>Refugio David Torres Trujillo</span></p>
+    </header>
+    <div class="Nproceso">
+
+        <form class="formulario" action="">
+            <fieldset>
+                <legend> Numero de Procesos </legend>
+                <label for="procesos">¿Cuantos procesos ingresara?</label>
+                <input type="num" id="procesos" required>
+            </fieldset>
+        </form>
+        <input class='boton' type="submit" id="ingresar" value="Ingresar">
+     
+    </div>
+    <div class="contenedor">
+        <div>
+            <p id="lotePendientes"></p>
+            <!--Lote en Proceso-->
+            <h2>Lote en Proceso</h2>
+            <table class="tabla">
+                <thead>
+                    <th>Lote</th>
+                    <th>ID</th>
+                    <th>Tiempo Max. Estimado</th>
+                </thead>
+                <tbody id="loteProceso">
+
+                </tbody>
+            </table>
+        </div>
+        <!-- Proceso en Ejecucion -->
+        <div >
+            <p class='alerta'></p>
+            <h2>Proceso en Ejecucion</h2>
+            <div id="procesoEjecucion" class="proceso">
+
+            </div>
+        </div>
+        <div>
+            <h2>Procesos Terminados</h2>
+            <table class="tabla">
+                <thead>
+                    <th>Lote</th>
+                    <th>ID</th>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                </thead>
+                <tbody id="procesoTerminado">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <p>Press inside this IFrame first to focus it, then try pressing keys on the keyboard.</p>
+    <p id="log"></p> -->
+    <footer>
+        <p id="tiempoTotal" class="ttotal"></p>
+        <p>Seminario de Solucion de problemas de sistemas operativos</p>
+    </footer>
+
+    <!-- <script type="module" src="js/app.js"></script> -->
+    <script src="node_modules/advanced-timer/src/main.js"></script>
+    <script src="js/Proceso.js"> </script>
+    <script src="js/index.js"> </script> 
+</body>
+</html>
